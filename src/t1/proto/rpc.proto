@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+import "google/protobuf/empty.proto";
+package RPCPkg;
+
+
+service RPC{
+	rpc GetCoord(google.protobuf.Empty) returns (Coords){}
+}
+
+message Coords{
+	repeated double values = 1 [packed = true];
+}
