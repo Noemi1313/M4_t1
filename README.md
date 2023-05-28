@@ -1,7 +1,6 @@
 # M4_t1
 
 ### Diagrama DFD
----
 ![Diagram](diagramas/DFD_Tarea_Interfases.drawio.png)
 
 ### Demo
