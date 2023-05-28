@@ -23,5 +23,19 @@ python3 wrapper.py
 
 ### Cliente gRPC en C#
 ```
+/home/noemi/.nuget/packages/grpc.tools/1.2.2/tools/linux_x64/protoc -I ./ -I /home/noemi/protobuf/src --csharp_out ./ ./rpc.proto --grpc_out ./ --plugin=protoc-gen-grpc=/home/noemi/.nuget/packages/grpc.tools/1.2.2/tools/linux_x64/grpc_csharp_plugin
 mono cliente_cs.exe
+```
+
+### gRPC Gateway
+```
+go install github.com/grpc-ecosystem/grpc-gateway/v2/protoc-gen-grpc-gateway
+go install github.com/grpc-gateway/v2/protoc-gen-openapiv2
+go install google.golang.org/protobuf/cmd/protoc-gen-go
+go install google.golang.org/grpc/cmd/protoc-gen-go-grpc
+protoc -I ./proto -I /home/robotics/data/devel/googleapis --go_out ./proto --go_opt paths=source_relative --go-grpc_out ./proto --go-grpc_opt paths=source_relative rpc.proto
+protoc -I ./proto -I /home/robotics/data/devel/googleapis --plugin=protoc-gen-grpc-gateway=/home/robotics/tools/gw/protoc-gen-grpc-gateway-v2.15.2-linux-x86_64 --grpc-gateway_out ./proto --grpc-gateway_opt logtostderr=true --grpc-gateway_opt paths=source_relative rpc.proto
+go mod init rest-gw.com/rest-gw
+go mod tidy
+go build go-gateway.go
 ```
