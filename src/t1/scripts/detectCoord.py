@@ -16,9 +16,19 @@ import time
 
 
 class m4_t1:
+  """
+    Clase para obtener las coordenadas de un objeto de color verde usando la webcam.
+
+    Attributes:
+        mylib (ctypes.CDLL): Biblioteca en C++ para multiplicar las coordenadas por 100.
+        funct (ctypes.CFUNCTYPE): Función de la biblioteca en C++ para multiplicar las coordenadas por 100.
+        pub (rospy.Publisher): Publicador de los datos de coordenadas y tiempo.
+    """
 
   def __init__(self):
-
+    """
+        Inicializa una instancia de la clase m4_t1.
+    """
     # Libreria en c++ para multiplicar las coordenadas *100
     path = "/home/noemi/M4/src/t1/lib/libmulti.so"
     self.mylib = ctypes.cdll.LoadLibrary(path)
@@ -29,6 +39,9 @@ class m4_t1:
     self.pub = rospy.Publisher('coord', Float64MultiArray, queue_size=10)
 
   def video(self):
+    """
+        Inicia el proceso de captura de video y detección del objeto de color verde.
+    """
     # Definir el uso de la webcam
     vid = cv2.VideoCapture(0)
       

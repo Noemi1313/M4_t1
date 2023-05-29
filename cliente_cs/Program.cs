@@ -8,8 +8,15 @@ using System;
 
 namespace Application
 {
+    /// <summary>
+    /// Clase principal del programa.
+    /// </summary>
     class Program
     {
+        /// <summary>
+        /// Punto de entrada del programa.
+        /// </summary>
+        /// <param name="args">Argumentos de línea de comandos.</param>
         static void Main(string[] args)
         {
             // Crear canal gRPC para establecer una conexion con el servidor
