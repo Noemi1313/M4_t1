@@ -39,3 +39,9 @@ go mod init rest-gw.com/rest-gw
 go mod tidy
 go build go-gateway.go
 ```
+
+### Doxygen
+![Diagram](diagramas/dox_m4.png)
+Se agregaron comentarios en estilo Doxygen en los siguientes programas:
+* multi.cpp
+* Program.cs
