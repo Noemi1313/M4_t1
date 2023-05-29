@@ -1,4 +1,5 @@
 # M4_t1
+Integrando servicios de SW utilizando interfases
 
 ### Diagrama DFD
 ![Diagram](diagramas/DFD_Tarea_Interfases.drawio.png)
@@ -47,3 +48,4 @@ Se agregaron comentarios en estilo Doxygen en los siguientes programas:
 * detectCoord.py
 * wrapper.py
 * Program.cs
+Sin embargo, los archivos protobuf y los archivos grpc creados no pueden ser comentados, por lo que se explica como descargar las dependencias, compilar y ejecutar esos codigos en este README.
