@@ -52,3 +52,15 @@ Se agregaron comentarios en estilo Doxygen en los siguientes programas:
 <b>
 Sin embargo, los archivos protobuf y los archivos grpc creados no pueden ser comentados, por lo que se explica como descargar las dependencias, compilar y ejecutar esos codigos en este README.
 </b>
+
+### CORS
+El Intercambio de Recusos de Orígen Cruzado (CORS) hace referencia a una característica de seguridad del navegador que restringe las solicitudes HTTP de origen cruzado que se inician desde secuencias de comandos que se ejecutan en el navegador. Cuando un recurso en un dominio intenta hacer una solicitud HTTP a otro dominio, el navegador usualmente impide estas solicitudes por razones de seguridad. Aqui es donde entra CORS al ofrecer una manera de relajar esta política, permitiendo solicitudes entre dominios, siempre y cuando el servidor receptor tenga la configuración adecuada.
+Para poder habilitar CORS, es necesario que el servidor envíe encabezados HTTP específicos en las respuetas, indicando los dominios o recursos externos que tienen permiso para acceder al servidor. Algunos ejemplos de estos encabezados son:
+* Access-Control-Allow-Origin: Especifica los dominios permitidos.
+* Access-Control-Allow-Methods: Indica los metodos de solicitud HTTP permitidos.
+
+CORS tiene un rol importante cuando se desarrollan aplicaciones web con servicios o recursos de diferentes dominios (como API REST), ya que agrega seguridad y control en las solicitudes del navegador. Además, mejora la experiencia del usuario, ya que le permite a la aplicación web realizar solicitudes a dominios externos para mostrar datos en tiempo real, utilizar servicios adicionales e integrar contenidos de terceros. Finalmente, al permitir el acceso a recursos de origen cruzado, las API REST pueden ser utilizadas por varios servicios y aplicaciones, lo cual permite tener capacidad de crecimiento y verstilidad para facilitar la construcción de sistemas modulares y arquitecturas distribuidas.
+
+<b>Referencias</b>
+
+AWS (2023). Habilitación de CORS para un recurso de la API de REST. Recuperado de: https://docs.aws.amazon.com/es_es/apigateway/latest/developerguide/how-to-cors.html
