@@ -1,5 +1,6 @@
 #!/usr/bin/env python
 # Servidor gRPC
+# Noemi Carolina Guerra Montiel - A00826944
 
 # Librerias ROS
 import rospy
@@ -42,22 +43,32 @@ def terminate_server(signum, frame):
     terminate.set()
             
 if __name__ == '__main__':
+    # Crear un evento para terminar el server
     terminate = threading.Event()
+    # Hacer que el server acabe con SIGINT o ctrl+c
     signal.signal(signal.SIGINT, terminate_server)
+    # Inicializar el nodo de ROS
     rospy.init_node('wrapper', anonymous=True)
 
     print("Start sever")
+    # Definir la direccion del servidor
     addr = "[::]:7042"
+    # Crear una instancia de la clase RPCService
     service =RPCService()
     server = grpc.server(futures.ThreadPoolExecutor(max_workers=10))
+    # Anadir la implementacion del servicio rpc al servidor
     pb2_grpc.add_RPCServicer_to_server(service, server)
+    # Anadir el puerto previamente declarado
     server.add_insecure_port(addr)
+    # Iniciar el servidor
     server.start()
     print("Server started and listening on [::]:7042")
 
     rospy.spin()
     print("Exit")
+    # Esperar a que se de la llamada de terminacion del servicio
     terminate.wait()
+    # Detener el servicio
     server.stop(1).wait()
     
 
