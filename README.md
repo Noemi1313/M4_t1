@@ -44,4 +44,6 @@ go build go-gateway.go
 ![Diagram](diagramas/dox_m4.png)
 Se agregaron comentarios en estilo Doxygen en los siguientes programas:
 * multi.cpp
+* detectCoord.py
+* wrapper.py
 * Program.cs
