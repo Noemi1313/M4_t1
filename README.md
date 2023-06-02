@@ -2,7 +2,8 @@
 #### Noemi Carolina Guerra Montiel - A00826944
 Integrando servicios de SW utilizando interfases
 
-
+### Diagrama DFD
+![Diagram](diagramas/DFD_Tarea_Interfases.drawio.png)
 
 ### Demo
 https://drive.google.com/file/d/1ZOs1unn6kA5U5rV5y0QQWPOcXgRjD0eg/view?usp=drive_link
