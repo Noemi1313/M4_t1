@@ -64,4 +64,4 @@ CORS tiene un rol importante cuando se desarrollan aplicaciones web con servicio
 
 <b>Referencias</b>
 
-AWS (2023). Habilitación de CORS para un recurso de la API de REST. Recuperado de: https://docs.aws.amazon.com/es_es/apigateway/latest/developerguide/how-to-cors.html
+AWS (2023). Habilitación de CORS para un recurso de la API de REST. Recuperado de: https://docs.aws.amazon.com/es_es/apigateway/latest/developerguide/how-to-cors.html.
